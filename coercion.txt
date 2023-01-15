@@ -1,0 +1,7 @@
+== vs === 
+
+== does coercion 
+=== dont do coercion 
+
+string template 
+---------------------
