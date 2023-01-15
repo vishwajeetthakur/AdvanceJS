@@ -1,6 +1,5 @@
 
-let obj = {x:10, y:20,valueOf(){return "valueOf called";},
-         toString(){return "toString called"}}
+let obj = {x:10, y:20,valueOf(){return "valueOf called";}}
 
 
 console.log(`obj is this : `+obj)  // valueOf called
