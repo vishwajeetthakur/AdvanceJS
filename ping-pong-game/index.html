@@ -1,0 +1,87 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div id="parent">
+        
+
+        <div class="box" id="box2"> This is my moving div! </div>
+
+        <div class="box" id="box1"> This is my moving div! </div>
+    </div>
+   <script>
+        var value1 = 0;
+        document.addEventListener('keydown', (event)=>{
+            console.log(event.key)
+            console.log(typeof(event.key))
+            if(event.key=="s"){
+                moveDown2()
+            }
+            if(event.key=="w"){
+                moveUp2()
+            }
+            e = event || window.event;
+
+            if(e.keyCode==40){
+                console.log("40 pressed")
+                moveDown1()
+            }
+            if(e.keyCode==38){
+                console.log("38 pressed")
+                moveUp1()
+            }
+            
+        })
+
+        
+
+      function moveDown1(){
+         
+         var div = document.getElementById("box1");
+         
+         value1 = value1 + 10 
+         div.style.top =  value1 + "px"
+        
+         console.log(value1)
+      }
+      var value2 = 0;
+      function moveDown2(){
+         
+        var div = document.getElementById("box2");
+        
+        value2 = value2 + 10 
+        div.style.top =  value2 + "px"
+        
+        
+        console.log(value2)
+     }
+
+      function moveUp1(){
+        var k = document.getElementById("box1");
+        
+        value1 = value1 - 10 
+        k.style.top =  value1 + "px"
+        console.log(k.style.top1)
+     }
+
+     function moveUp2(){
+        var k = document.getElementById("box2");
+        
+        value2 = value2 - 10 
+        k.style.top =  value2 + "px"
+        console.log(k.style.top)
+
+        /*
+            div.style.top = div.offsetTop + 1 + "px";
+            div.style.left = div.offsetLeft + 1 + "px"; },
+        */
+     }
+
+   </script>
+</body>
+</html>

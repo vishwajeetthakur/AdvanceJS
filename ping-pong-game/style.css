@@ -1,0 +1,19 @@
+.box{
+    display: flex;
+    flex-basis: auto;
+    position: relative;
+    height: 200px;
+    width: 70px;
+    background-color: blue;
+    
+}
+
+#parent{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+
+
