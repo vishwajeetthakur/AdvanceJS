@@ -15,7 +15,7 @@
         <div class="box" id="box1"> This is my moving div! </div>
     </div>
    <script>
-        var value1 = 0;
+        
         document.addEventListener('keydown', (event)=>{
             console.log(event.key)
             console.log(typeof(event.key))
@@ -38,43 +38,64 @@
             
         })
 
-        
+        var value1 = 0;
 
       function moveDown1(){
          
          var div = document.getElementById("box1");
          
-         value1 = value1 + 10 
-         div.style.top =  value1 + "px"
-        
+         if( value1 < 400){
+            value1 = value1 + 10 
+            div.style.top =  value1 + "px"
+         }
+         else{
+            console.log("movement not allowed DOWN ", value1)
+        }
          console.log(value1)
       }
       var value2 = 0;
       function moveDown2(){
          
         var div = document.getElementById("box2");
-        
-        value2 = value2 + 10 
-        div.style.top =  value2 + "px"
-        
+        // num = parseInt(div.style.top)
+        if( value2 < 400){
+            value2 = value2 + 10 
+            div.style.top =  value2 + "px"
+        }
+        else{
+            console.log("movement not allowed DOWN ", value2)
+        }
         
         console.log(value2)
      }
 
       function moveUp1(){
+
         var k = document.getElementById("box1");
-        
-        value1 = value1 - 10 
-        k.style.top =  value1 + "px"
+        // console.log("this is position", k.style.top)
+        num = parseInt(k.style.top)
+        if( num >= 10){
+            value1 = value1 - 10 
+            k.style.top =  value1 + "px"
+        }
+        else{
+            console.log("movement not allowed ", num)
+        }
         console.log(k.style.top1)
      }
 
      function moveUp2(){
         var k = document.getElementById("box2");
-        
-        value2 = value2 - 10 
-        k.style.top =  value2 + "px"
+        num = parseInt(k.style.top)
+        if( num >= 10){
+            value2 = value2 - 10 
+            k.style.top =  value2 + "px"
+        }
+        else{
+            console.log("movement not allowed ", num)
+        }
         console.log(k.style.top)
+
 
         /*
             div.style.top = div.offsetTop + 1 + "px";
